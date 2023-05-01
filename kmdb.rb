@@ -73,6 +73,7 @@ Studio.destroy_all
 # Do not use hard-coded foreign key IDs.
 # TODO!
 
+
 # Prints a header for the movies output
 puts "Movies"
 puts "======"
@@ -80,6 +81,11 @@ puts ""
 
 # Query the movies data and loop through the results to display the movies output.
 # TODO!
+movies = Movie.all
+
+movies.each do |movie|
+  puts "#{movie.title} (#{movie.year}) - #{movie.rating} - #{movie.studio.name}"
+end
 
 # Prints a header for the cast output
 puts ""
@@ -89,3 +95,8 @@ puts ""
 
 # Query the cast data and loop through the results to display the cast output for each movie.
 # TODO!
+casts = Cast.all
+
+casts.each do |cast|
+  puts "#{cast.name} as #{cast.role} in #{cast.movie.title}"
+end
