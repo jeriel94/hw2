@@ -7,40 +7,31 @@
 # `rails runner kmdb.rb`
 
 # Requirements/assumptions
-#
-# - There will only be three movies in the database – the three films
+# - There will only be 3 movies in the database – the 3 films
 #   that make up Christopher Nolan's Batman trilogy.
 # - Movie data includes the movie title, year released, MPAA rating,
 #   and studio.
 # - There are many studios, and each studio produces many movies, but
 #   a movie belongs to a single studio.
 # - An actor can be in multiple movies.
-# - Everything you need to do in this assignment is marked with TODO!
 
 # Rubric
-# 
-# There are three deliverables for this assignment, all delivered within
+# There are 3 deliverables for this assignment, all delivered within
 # this repository and submitted via GitHub and Canvas:
+
 # - Generate the models and migration files to match the domain model from hw1.
 #   Table and columns should match the domain model. Execute the migration
 #   files to create the tables in the database. (5 points)
+
 # - Insert the "Batman" sample data using ruby code. Do not use hard-coded ids.
 #   Delete any existing data beforehand so that each run of this script does not
 #   create duplicate data. (5 points)
+
 # - Query the data and loop through the results to display output similar to the
 #   sample "report" below. (10 points)
 
-# Submission
-# 
-# - "Use this template" to create a brand-new "hw2" repository in your
-#   personal GitHub account, e.g. https://github.com/<USERNAME>/hw2
-# - Do the assignment, committing and syncing often
-# - When done, commit and sync a final time before submitting the GitHub
-#   URL for the finished "hw2" repository as the "Website URL" for the 
-#   Homework 2 assignment in Canvas
 
 # Successful sample output is as shown:
-
 # Movies
 # ======
 
@@ -70,9 +61,13 @@
 # Delete existing data, so you'll start fresh each time this script is run.
 # Use `Model.destroy_all` code.
 # TODO!
+Movie.destroy_all
+Cast.destroy_all
+Studio.destroy_all
 
 # Generate models and tables, according to the domain model.
 # TODO!
+
 
 # Insert data into the database that reflects the sample data shown above.
 # Do not use hard-coded foreign key IDs.
